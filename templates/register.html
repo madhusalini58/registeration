@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <form id="RegistrationForm" method="post">
+        <div class="container">
+            <h2>Registration Form</h2>
+            <div class="main1">
+                <div class="subleft">
+                    <div class="in1">
+                        <label for="fullname"><b>Full Name</b></label><br>
+                    </div>
+                    <div class="in2">
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required><br>
+                    </div>
+                    <div class="in3">
+                        <label for="email"><b>Email</b></label><br>
+                    </div>
+                    <div class="in4">
+                        <input type="email" name="mail" id="email" placeholder="Enter your email" required><br>
+                    </div>
+                    <div class="in5">
+                        <label for="password"><b>Password</b></label><br>
+                    </div>
+                    <div class="in6">
+                        <input type="password" name="pass" id="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <div class="subright">
+                    <div class="in7">
+                        <label for="username"><b>Username</b></label><br>
+                    </div>
+                    <div class="in8">
+                        <input type="text" name="username" id="username" placeholder="Enter your username" required><br>
+                    </div>
+                    <div class="in9">
+                        <label for="phone"><b>Phone Number</b></label><br>
+                    </div>
+                    <div class="in10">
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required><br>
+                    </div>
+                    <div class="in11">
+                        <label for="confirmPassword"><b>Confirm Password</b></label><br>
+                    </div>
+                    <div class="in12">
+                        <input type="password" name="confirm_pass" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+            </div>
+            <h2>Gender</h2>
+            <div class="subbottom">
+                <div class="male">
+                    <input type="radio" name="gender" id="male" value="male"><label for="male">Male</label>
+                </div>
+                <div class="female">
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+                </div>
+                <div class="other">
+                    <input type="radio" name="gender" id="other" value="other"><label for="other">Prefer not to say</label>
+                </div>    
+            </div>
+            <div id="errorMessages"></div>
+            <button class="fullbut" type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>
