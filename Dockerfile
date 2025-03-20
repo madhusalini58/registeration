@@ -10,10 +10,8 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application files
-
-
+# Expose a different port
 EXPOSE 5000
 
-# Define the command to run the app
-CMD ["python", "app.py"]
+# Define the command to run the app on port 5001
+CMD ["python", "app.py", "--port=5000"]
